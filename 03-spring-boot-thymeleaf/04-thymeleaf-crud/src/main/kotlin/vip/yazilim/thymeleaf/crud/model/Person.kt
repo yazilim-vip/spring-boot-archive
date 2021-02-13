@@ -1,4 +1,4 @@
-package vip.yazilim.thymeleaf.form_submission.model
+package vip.yazilim.thymeleaf.crud.model
 
 /**
  *

@@ -1,8 +1,8 @@
-package vip.yazilim.thymeleaf.form_submission.service.impl
+package vip.yazilim.thymeleaf.crud.service.impl
 
 import org.springframework.stereotype.Service
-import vip.yazilim.thymeleaf.form_submission.model.Person
-import vip.yazilim.thymeleaf.form_submission.service.IPersonService
+import vip.yazilim.thymeleaf.crud.model.Person
+import vip.yazilim.thymeleaf.crud.service.IPersonService
 
 /**
  *

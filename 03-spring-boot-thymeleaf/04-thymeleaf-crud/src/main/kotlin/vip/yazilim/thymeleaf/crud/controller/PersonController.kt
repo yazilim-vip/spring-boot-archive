@@ -1,10 +1,10 @@
-package vip.yazilim.thymeleaf.form_submission.controller
+package vip.yazilim.thymeleaf.crud.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
-import vip.yazilim.thymeleaf.form_submission.service.IPersonService
+import vip.yazilim.thymeleaf.crud.service.IPersonService
 
 /**
  *

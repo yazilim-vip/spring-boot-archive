@@ -1,6 +1,6 @@
-package vip.yazilim.thymeleaf.form_submission.service
+package vip.yazilim.thymeleaf.crud.service
 
-import vip.yazilim.thymeleaf.form_submission.model.Person
+import vip.yazilim.thymeleaf.crud.model.Person
 
 /**
  *

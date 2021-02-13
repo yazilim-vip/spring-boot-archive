@@ -1,4 +1,4 @@
-package vip.yazilim.thymeleaf.form_submission.controller
+package vip.yazilim.thymeleaf.crud.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping

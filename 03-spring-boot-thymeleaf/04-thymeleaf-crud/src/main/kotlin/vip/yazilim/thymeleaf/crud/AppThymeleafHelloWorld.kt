@@ -1,4 +1,4 @@
-package vip.yazilim.thymeleaf.form_submission
+package vip.yazilim.thymeleaf.crud
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
