@@ -12,7 +12,6 @@
         <module>01-thymeleaf-hello-world</module>
         <module>02-thymeleaf-layouts</module>
         <module>03-thymeleaf-bootstrap-webjars</module>
-        <module>03-thymeleaf-layouts-old</module>
         <module>04-thymeleaf-form-submission</module>
         <module>05-thymeleaf-form-login</module>
     </modules>
