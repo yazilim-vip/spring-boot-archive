@@ -9,5 +9,6 @@
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
     <modules>
+        <module>data-h2</module>
     </modules>
 </project>
