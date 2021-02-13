@@ -22,14 +22,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item" th:classappend="${#request.requestURI == '/' ? 'active' : ''}">
+                    <li class="nav-item">
                         <a class="nav-link" th:href="@{/}">Welcome <span class="sr-only">(current)</span></a>
                     </li>
-                    <li
-                            class="nav-item"
-                            th:classappend="${#request.requestURI == '/person' ? 'active' : ''}">
-                        <a class="nav-link" th:href="@{/person}">
-                            Persons
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/about}">
+                            About
                         </a>
                     </li>
                 </ul>
@@ -39,46 +37,22 @@
 </header>
 
 
-
 <div class="container">
     <main class="my-4">
-        <div th:if="${selectedPerson != null}">
-            Selected Person: <span th:text="${selectedPerson.name}"></span>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                Persons
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">About Page</h1>
+                <p class="lead">This is about page.</p>
             </div>
-            <ul class="list-group list-group-flush">
-                <tr th:each="person: ${personList}">
-                    <li class="list-group-item"
-                        th:onclick="|window.location.href='@{/person/{name}(name = ${person.name})}'|"
-                        th:with="isSelectedPerson=${selectedPerson != null && selectedPerson.name == person.name ? true : false}"
-                        th:classappend="${isSelectedPerson ? 'active' : ''}">
-                        <b>Full Name:</b>
-                        <td th:text="${person.name}"/>
-                        <td th:text="${person.surname}"/>
-                        <br/>
-                        <b>Age:</b>
-                        <td th:text="${person.age}"/>
-                    </li>
-                </tr>
-            </ul>
         </div>
-
     </main>
 </div>
-
-<!--footer.html  that's here  -->
 
 <footer class="footer">
     <div class="container">
         <span class="text-muted">Place sticky footer content here.</span>
     </div>
 </footer>
-
-
 
 <!-- JS -->
 <script type="text/javascript" th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
