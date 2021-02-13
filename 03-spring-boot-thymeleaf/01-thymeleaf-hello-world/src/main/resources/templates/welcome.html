@@ -8,25 +8,13 @@
 
     <!-- CSS Files -->
     <link th:href="@{/css/index.css}" rel="stylesheet"/>
-    <link th:href="@{/css/navbar.css}" rel="stylesheet"/>
-    <link th:href="@{/css/customList.css}" rel="stylesheet"/>
 </head>
 <body>
 
-<!--header.html  that's here  -->
-<div class="topnav">
-    <a th:href="@{/}"
-       class="active"
-    >
-        Welcome
-    </a>
-    <a th:href="@{/person}">
-        Persons
-    </a>
-</div>
-
 <main>
     Welcome Demo Spring Boot Thymeleaf Hello World App!
+    <br />
+    <b>Message: </b><span class="message" th:text="${message}"></span>
 </main>
 
 <!-- JS -->

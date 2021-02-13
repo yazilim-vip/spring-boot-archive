@@ -68,13 +68,7 @@
                     </args>
                     <compilerPlugins>
                         <plugin>spring</plugin>
-                        <plugin>no-arg</plugin>
                     </compilerPlugins>
-                    <pluginOptions>
-                        <option>
-                            no-arg:annotation=vip.yazilim.data.h2.annotations.NoArgConstructor
-                        </option>
-                    </pluginOptions>
                 </configuration>
                 <dependencies>
                     <dependency>
