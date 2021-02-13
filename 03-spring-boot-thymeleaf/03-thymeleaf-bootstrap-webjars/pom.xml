@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>vip.yazilim</groupId>
-    <artifactId>02-thymeleaf-bootstrap-webjars</artifactId>
+    <artifactId>03-thymeleaf-bootstrap-webjars</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Thymeleaf Web App</name>
     <description>Example Thymeleaf Web Application with Spring Boot</description>

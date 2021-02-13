@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/layout}"
+      th:with="title='Home'">
+
+<div layout:fragment="content">
+    Welcome Demo Spring Boot Thymeleaf Hello World App!
+    <br/>
+    <b>Message: </b><span class="message" th:text="${message}"></span>
+</div>
+
+</html>
+
