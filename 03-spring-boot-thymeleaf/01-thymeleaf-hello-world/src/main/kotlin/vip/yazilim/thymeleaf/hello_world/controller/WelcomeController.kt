@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam
 import java.util.*
+import java.util.function.Supplier
 
 /**
  *
@@ -16,7 +17,7 @@ import java.util.*
 @Controller
 class WelcomeController {
 
-    @GetMapping("/{path-variable}")
+    @GetMapping("/message/{path-variable}")
     fun welcome(
         @PathVariable("path-variable") pathVariable: String,
         model: Model
@@ -27,14 +28,10 @@ class WelcomeController {
 
     @GetMapping("/")
     fun welcome2(
-        @RequestParam(name = "requestParam") queryParam: Optional<String>,
+        @RequestParam(name = "message") message: Optional<String>,
         model: Model
     ): String {
-        var message = "default value"
-        queryParam.ifPresent {
-            message = it
-        }
-        model.addAttribute("message", message)
+        model.addAttribute("message", message.orElseGet { "default-value" })
         return "welcome"
     }
 }

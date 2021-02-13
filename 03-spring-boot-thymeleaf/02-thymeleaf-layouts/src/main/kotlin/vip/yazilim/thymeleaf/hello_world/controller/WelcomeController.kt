@@ -27,14 +27,10 @@ class WelcomeController {
 
     @GetMapping("/")
     fun welcome2(
-        @RequestParam(name = "requestParam") queryParam: Optional<String>,
+        @RequestParam(name = "message") message: Optional<String>,
         model: Model
     ): String {
-        var message = "default value"
-        queryParam.ifPresent {
-            message = it
-        }
-        model.addAttribute("message", message)
+        model.addAttribute("message", model.addAttribute("message", message.orElseGet { "default-value" }))
         return "welcome"
     }
 }

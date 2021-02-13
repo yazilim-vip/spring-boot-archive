@@ -8,7 +8,7 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>vip.yazilim</groupId>
-    <artifactId>04-thymeleaf-form-submission</artifactId>
+    <artifactId>04-thymeleaf-crud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Thymeleaf Web App</name>
     <description>Example Thymeleaf Web Application with Spring Boot</description>
