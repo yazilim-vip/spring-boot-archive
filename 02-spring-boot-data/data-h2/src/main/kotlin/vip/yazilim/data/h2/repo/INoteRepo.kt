@@ -10,6 +10,4 @@ import vip.yazilim.data.h2.entity.Note
  * 28.12.2020
  */
 @Repository
-interface INoteRepo : JpaRepository<Note, Long> {
-    fun findByName(name: String): Note?
-}
+interface INoteRepo : JpaRepository<Note, Long>

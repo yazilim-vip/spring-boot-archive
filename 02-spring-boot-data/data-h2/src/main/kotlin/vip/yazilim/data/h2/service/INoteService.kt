@@ -1,6 +1,7 @@
 package vip.yazilim.data.h2.service
 
 import vip.yazilim.data.h2.entity.Note
+import java.util.*
 
 /**
  *
@@ -8,7 +9,8 @@ import vip.yazilim.data.h2.entity.Note
  * 2/13/2021
  */
 interface INoteService {
-    fun save(note: Note): Note?
     fun getAll(): List<Note>
+    fun getById(id: Long): Optional<Note>
+    fun save(note: Note): Note?
     fun delete(note: Note)
 }

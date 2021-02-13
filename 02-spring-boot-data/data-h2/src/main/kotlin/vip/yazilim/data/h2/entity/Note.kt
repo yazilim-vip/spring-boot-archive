@@ -1,7 +1,7 @@
 package vip.yazilim.data.h2.entity
 
 import vip.yazilim.data.h2.annotations.NoArgConstructor
-import java.time.LocalDate
+import java.time.LocalDateTime
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -15,13 +15,15 @@ import javax.persistence.Id
 @Entity
 @NoArgConstructor
 class Note(
-    val title: String,
-    val text: String,
-    val creationDate: LocalDate,
+    var title: String,
+    var text: String,
+    var creationDate: LocalDateTime,
+    var updateDate: LocalDateTime? = null
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private var id: Long? = null
+    var id: Long? = null
+
     override fun toString(): String {
         return "Note(id=$id, title='$title', text='$text', creationDate=$creationDate)"
     }
