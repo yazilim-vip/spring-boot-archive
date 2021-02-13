@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>vip.yazilim</groupId>
-    <artifactId>spring-boot-basics</artifactId>
+    <artifactId>01-spring-boot-basics</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-hello-world</name>
     <packaging>pom</packaging>

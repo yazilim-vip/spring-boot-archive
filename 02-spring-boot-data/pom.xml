@@ -3,15 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>vip.yazilim</groupId>
-    <artifactId>spring-boot-data</artifactId>
+    <artifactId>02-spring-boot-data</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-hello-world</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
     <modules>
-        <module>basics-aop</module>
-        <module>basics-bean-scopes</module>
-        <module>basics-component-scan</module>
-        <module>basics-dependency-injection</module>
     </modules>
 </project>
