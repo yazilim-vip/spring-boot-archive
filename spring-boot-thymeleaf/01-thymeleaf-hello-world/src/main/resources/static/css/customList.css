@@ -1,0 +1,23 @@
+ul.custom-list {
+    list-style-type:none;
+    padding: 0;
+}
+
+ul.custom-list li {
+    padding: 1em;
+}
+
+ul.custom-list li.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.custom-list li:not(.active):hover {
+    margin-left: 0;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+ul.custom-list li:not(:last-child) {
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simple Login App</title>
+
+    <!-- CSS Files -->
+    <link th:href="@{/css/index.css}" rel="stylesheet"/>
+    <link th:href="@{/css/navbar.css}" rel="stylesheet"/>
+    <link th:href="@{/css/customList.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<!--header.html  that's here  -->
+<div class="topnav">
+    <a th:href="@{/}"
+       class="active"
+    >
+        Welcome
+    </a>
+    <a th:href="@{/person}">
+        Persons
+    </a>
+</div>
+
+<main>
+    Welcome Demo Spring Boot Thymeleaf Hello World App!
+</main>
+
+<!-- JS -->
+<script th:src="@{/js/index.js}" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+
+
