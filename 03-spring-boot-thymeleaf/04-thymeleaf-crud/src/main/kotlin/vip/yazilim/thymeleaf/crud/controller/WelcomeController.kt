@@ -15,21 +15,10 @@ import java.util.*
 @Controller
 class WelcomeController {
 
-    @GetMapping("/message/{path-variable}")
-    fun welcome(
-        @PathVariable("path-variable") pathVariable: String,
-        model: Model
-    ): String {
-        model.addAttribute("message", pathVariable)
-        return "welcome"
-    }
 
     @GetMapping("/")
-    fun welcome2(
-        @RequestParam(name = "message") message: Optional<String>,
-        model: Model
+    fun welcome(
     ): String {
-        model.addAttribute("message", message.orElseGet { "default-value" })
         return "welcome"
     }
 }

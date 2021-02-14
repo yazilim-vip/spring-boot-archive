@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/layout}"
+      th:with="title='Home'">
+
+<div layout:fragment="content">
+
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action list-group-item-info"
+           th:each="note: ${noteList}"
+           th:href="@{/note/{id}(id = ${note.id})}">
+
+            <b><span th:text="${note.title}"></span></b>
+
+            <hr/>
+            <span th:text="${note.text}"></span>
+            <hr/>
+            <span th:text="${note.creationDate}"></span>
+        </a>
+    </div>
+</div>
+
+</html>
+

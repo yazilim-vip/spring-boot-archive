@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/layout}"
+      th:with="title='Home'">
+
+<div layout:fragment="content">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Updated</h1>
+            <p class="lead">
+                <b>Message: </b><span class="message" th:text="${message}"></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+</html>
+
