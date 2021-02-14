@@ -7,9 +7,7 @@ import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.*
 import vip.yazilim.thymeleaf.crud.entity.Note
 import vip.yazilim.thymeleaf.crud.service.INoteService
-import vip.yazilim.thymeleaf.crud.service.impl.NoteServiceImpl
 import java.time.LocalDateTime
-import java.util.*
 
 /**
  *
@@ -47,8 +45,8 @@ class NoteController(private val noteService: INoteService) {
     fun editNotePage(@ModelAttribute note: Note, model: Model): String {
         return try {
             note.creationDate = LocalDateTime.now()
-            val createdNote = noteService.save(note)
-            "redirect:/note/edit/${createdNote.id}?error=false"
+            val editedNote = noteService.save(note)
+            "redirect:/note/edit/${editedNote.id}"
         } catch (exception: Exception) {
             logger.error("Error while editing note", exception)
             model.addAttribute("note", note)
