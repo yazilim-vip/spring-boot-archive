@@ -6,19 +6,32 @@
 
 <div layout:fragment="content">
 
-    <div class="list-group">
-        <a class="list-group-item list-group-item-action list-group-item-info"
-           th:each="note: ${noteList}"
-           th:href="@{/note/{id}(id = ${note.id})}">
 
-            <b><span th:text="${note.title}"></span></b>
+    <ul class="list-group note-list">
+        <li class="list-group-item list-group-item-action list-group-item-info"
+            th:each="note: ${noteList}">
 
+            <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <b><span th:text="${note.title}"></span></b>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a th:href="@{/note/edit/{id}(id = ${note.id})}">
+                        <i class="far fa-edit fa-2x"></i>
+                    </a>
+                    <a class="ml-3" th:href="@{/note/delete/{id}(id = ${note.id})}">
+                        <i class="fas fa-trash-alt fa-2x"></i>
+                    </a>
+                </div>
+            </div>
             <hr/>
             <span th:text="${note.text}"></span>
             <hr/>
-            <span th:text="${note.creationDate}"></span>
-        </a>
-    </div>
+            <small class="form-text text-muted">
+                <span th:text="${note.creationDate}"></span>
+            </small>
+        </li>
+    </ul>
 </div>
 
 </html>

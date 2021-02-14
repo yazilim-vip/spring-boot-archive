@@ -12,6 +12,6 @@ import java.util.*
 interface INoteService {
     fun getAll(): List<Note>
     fun getById(id: Long): Optional<Note>
-    fun save(note: Note): Note?
+    fun save(note: Note): Note
     fun delete(note: Note)
 }

@@ -21,8 +21,8 @@
                     </li>
                     <li
                             class="nav-item"
-                            th:classappend="${#request.requestURI == '/note' ? 'active' : ''}">
-                        <a class="nav-link" th:href="@{/about}">
+                            th:classappend="${#request.requestURI == '/note/edit' ? 'active' : ''}">
+                        <a class="nav-link" th:href="@{/note/edit}">
                             Create Note <i class="far fa-plus-square"></i>
                         </a>
                     </li>

@@ -16,10 +16,9 @@ class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     var id: Long? = null
-
-    lateinit var title: String
-    lateinit var text: String
-    lateinit var creationDate: LocalDateTime
+    var title: String? = null
+    var text: String? = null
+    var creationDate: LocalDateTime? = null
     var updateDate: LocalDateTime? = null
 
     override fun toString(): String {

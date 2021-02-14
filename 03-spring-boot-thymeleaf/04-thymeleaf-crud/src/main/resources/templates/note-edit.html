@@ -5,14 +5,20 @@
       th:with="title='Home'">
 
 <div layout:fragment="content">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Updated</h1>
-            <p class="lead">
-                <b>Message: </b><span class="message" th:text="${message}"></span>
-            </p>
+
+    <form action="#" method="post" th:action="@{/note/edit}" th:object="${note}">
+        <input type="hidden" id="id" th:field="*{id}">
+
+        <div class="form-group">
+            <label for="inputNoteTitle">Title</label>
+            <input type="text" class="form-control" id="inputNoteTitle" placeholder="Title" th:field="*{title}">
         </div>
-    </div>
+        <div class="form-group">
+            <label for="inputNoteText">Text</label>
+            <textarea class="form-control" id="inputNoteText" rows="4" th:field="*{text}"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 </html>
