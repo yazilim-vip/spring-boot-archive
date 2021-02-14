@@ -56,4 +56,13 @@ class NoteController(private val noteService: INoteService) {
         }
     }
 
+    @GetMapping("/delete/{id}")
+    fun deleteNote(@PathVariable("id") id: Long, model: Model): String {
+        val note = noteService.getById(id).orElseThrow {
+            NotFoundException("Not Found note[$id")
+        }
+        noteService.delete(note)
+        return "redirect:/note"
+    }
+
 }
