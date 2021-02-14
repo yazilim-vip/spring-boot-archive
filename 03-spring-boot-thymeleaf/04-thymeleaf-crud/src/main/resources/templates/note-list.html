@@ -8,7 +8,7 @@
 
 
     <ul class="list-group note-list">
-        <li class="list-group-item list-group-item-action list-group-item-info"
+        <li class="list-group-item list-group-item-action list-group-item-white"
             th:each="note: ${noteList}">
 
             <div class="d-flex justify-content-between">
@@ -16,10 +16,10 @@
                     <b><span th:text="${note.title}"></span></b>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a th:href="@{/note/edit/{id}(id = ${note.id})}">
+                    <a class="text-warning" th:href="@{/note/edit/{id}(id = ${note.id})}">
                         <i class="far fa-edit fa-2x"></i>
                     </a>
-                    <a class="ml-3" th:href="@{/note/delete/{id}(id = ${note.id})}">
+                    <a class="ml-3 text-danger" th:href="@{/note/delete/{id}(id = ${note.id})}">
                         <i class="fas fa-trash-alt fa-2x"></i>
                     </a>
                 </div>
