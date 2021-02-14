@@ -1,0 +1,2 @@
+# spring-data-core
+

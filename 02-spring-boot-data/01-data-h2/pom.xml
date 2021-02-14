@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>vip.yazilim</groupId>
-    <artifactId>data-h2</artifactId>
+    <artifactId>01-data-h2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-hello-world</name>
     <description>Demo project for Spring Boot</description>

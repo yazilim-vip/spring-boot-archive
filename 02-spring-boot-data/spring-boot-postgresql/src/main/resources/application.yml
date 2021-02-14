@@ -1,0 +1,19 @@
+
+server:
+
+  # configures the port that Eureka Server will be running
+  port: 8888
+
+  # Data source configuration
+  datasource:
+    url: jdbc:postgresql://172.17.0.2:5432/ConfigurationDB
+    username: postgres
+    password: pos
+    initialization-mode: never
+
+spring:
+  jpa:
+    hibernate.ddl-auto: none
+    properties:
+      hibernate.show_sql: true
+      hibernate.format_sql: true

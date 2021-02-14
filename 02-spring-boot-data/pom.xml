@@ -10,5 +10,12 @@
     <description>Demo project for Spring Boot</description>
     <modules>
         <module>01-data-h2</module>
+        <module>jdbc-template</module>
+        <module>jpa-hibernate</module>
+        <module>mongodb</module>
+        <module>mybatis</module>
+        <module>pom.xml</module>
+        <module>spring-boot-postgresql</module>
+        <module>spring-data-core</module>
     </modules>
 </project>
