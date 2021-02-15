@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping
 @Controller
 class WelcomeController {
 
-
     @GetMapping("/")
-    fun welcome(
-    ): String {
+    fun welcome(): String {
         return "welcome"
     }
 }

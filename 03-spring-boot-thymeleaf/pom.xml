@@ -14,5 +14,6 @@
         <module>03-thymeleaf-bootstrap-webjars</module>
         <module>04-thymeleaf-crud</module>
         <module>05-thymeleaf-form-login</module>
+        <module>05-thymeleaf-form-login-old</module>
     </modules>
 </project>

@@ -1,7 +1,7 @@
 package vip.yazilim.thymeleaf.form_login.controller
 
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.*
 
 /**
  *
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping
  * 27.12.2020
  */
 @Controller
-class WelcomeController {
+@RequestMapping("/about")
+class AboutController {
 
-
-    @GetMapping("/")
-    fun welcome(
-    ): String {
-        return "welcome"
+    @GetMapping("")
+    fun about(): String {
+        return "about"
     }
+
 }
