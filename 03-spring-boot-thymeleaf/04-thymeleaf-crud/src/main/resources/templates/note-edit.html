@@ -12,10 +12,12 @@
         <div class="form-group">
             <label for="inputNoteTitle">Title</label>
             <input type="text" class="form-control" id="inputNoteTitle" placeholder="Title" th:field="*{title}">
+            <small style="color:red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title</small>
         </div>
         <div class="form-group">
             <label for="inputNoteText">Text</label>
             <textarea class="form-control" id="inputNoteText" rows="4" th:field="*{text}"></textarea>
+            <small style="color:red" th:if="${#fields.hasErrors('text')}" th:errors="*{text}">Title</small>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

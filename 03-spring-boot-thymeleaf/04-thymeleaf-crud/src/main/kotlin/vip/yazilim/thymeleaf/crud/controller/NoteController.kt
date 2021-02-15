@@ -4,10 +4,13 @@ import javassist.NotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
+import org.springframework.validation.BindingResult
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
 import vip.yazilim.thymeleaf.crud.entity.Note
 import vip.yazilim.thymeleaf.crud.service.INoteService
 import java.time.LocalDateTime
+import javax.validation.Valid;
 
 /**
  *
@@ -42,7 +45,12 @@ class NoteController(private val noteService: INoteService) {
     }
 
     @PostMapping("/edit")
-    fun editNotePage(@ModelAttribute note: Note, model: Model): String {
+    fun editNotePage(@Valid note: Note, bindingResult: BindingResult, model: Model): String {
+
+        if (bindingResult.hasErrors()) {
+            return "note-edit"
+        }
+
         return try {
             note.creationDate = LocalDateTime.now()
             val editedNote = noteService.save(note)
