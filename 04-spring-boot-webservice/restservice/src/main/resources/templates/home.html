@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Getting Started: Serving Web Content</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            table tr{
+                padding:1em;
+                font-size:50px;
+            }
+            table button{
+                font-size:30px;
+                margin:1em 0.5em;
+            }
+        </style>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Prototype</td>
+                <td><button>Increase</button></td>
+                <td><button>Reset</button></td>
+                <td th:text="${prototype_var}"></td>
+            </tr>
+            <tr>
+                <td>Request</td>
+                <td><button>Increase</button></td>
+                <td><button>Reset</button></td>
+                <td th:text="${request_var}"></td>
+            </tr>
+            <tr>
+                <td>Session</td>
+                <td><button>Increase</button></td>
+                <td><button>Reset</button></td>
+                <td th:text="${session_var}"></td>
+            </tr>
+            <tr>
+                <td>Singleton</td>
+                <td><button>Increase</button></td>
+                <td><button>Reset</button></td>
+                <td th:text="${singleton_var}"></td>
+            </tr>
+        </table>
+
+
+        <script>
+            var button = document.getElementsByTagName("button"),
+            len = button.length,
+            i;
+            function click(){
+            alert(this.id);
+            }
+            for(i=0;i<len;i+=1){
+            button[i].onclick=click;
+            }
+        </script>
+
+    </body>
+</html>

@@ -3,16 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>vip.yazilim</groupId>
-    <artifactId>spring-boot-archive</artifactId>
+    <artifactId>04-spring-boot-webservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-hello-world</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
     <modules>
-        <module>01-spring-boot-basics</module>
-        <module>02-spring-boot-data</module>
-        <module>03-spring-boot-thymeleaf</module>
-        <module>04-spring-boot-webservice</module>
-        <module>99-spring-boot-unit-testing</module>
+        <module>restservice</module>
     </modules>
 </project>
