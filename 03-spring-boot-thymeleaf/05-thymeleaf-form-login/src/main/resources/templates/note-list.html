@@ -18,11 +18,11 @@
                 <div class="d-flex align-items-center">
                     <b><span th:text="${note.title}"></span></b>
                 </div>
-                <div class="d-flex align-items-center">
-                    <a class="text-warning" th:href="@{/note/edit/{id}(id = ${note.id})}">
+                <div sec:authorize="hasRole('ROLE_ADMIN')" class="d-flex align-items-center">
+                    <a class="text-warning" th:href="@{/secure/note/edit/{id}(id = ${note.id})}">
                         <i class="far fa-edit fa-2x"></i>
                     </a>
-                    <a class="ml-3 text-danger" th:href="@{/note/delete/{id}(id = ${note.id})}">
+                    <a class="ml-3 text-danger" th:href="@{/secure/note/delete/{id}(id = ${note.id})}">
                         <i class="fas fa-trash-alt fa-2x"></i>
                     </a>
                 </div>

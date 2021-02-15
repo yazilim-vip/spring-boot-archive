@@ -14,27 +14,49 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"
-                        th:classappend="${#request.requestURI == '/note' ? 'active' : ''}">
-                        <a class="nav-link" th:href="@{/note}">
-                            My Notes
-                        </a>
-                    </li>
-                    <li
-                            class="nav-item"
-                            th:classappend="${#request.requestURI == '/note/edit' ? 'active' : ''}">
-                        <a class="nav-link" th:href="@{/note/edit}">
-                            Create Note <i class="far fa-plus-square"></i>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"
                         th:classappend="${#request.requestURI == '/about' ? 'active' : ''}">
                         <a class="nav-link" th:href="@{/about}">
                             About
                         </a>
                     </li>
                 </ul>
+
+                <ul class="navbar-nav ml-auto" sec:authorize="isAuthenticated()">
+                    <li class="nav-item" sec:authorize="hasRole('ROLE_USER')"
+                        th:classappend="${#request.requestURI == '/secure/note' ? 'active' : ''}">
+                        <a class="nav-link" th:href="@{/secure/note}">
+                            My Notes
+                        </a>
+                    </li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')"
+                        class="nav-item"
+                        th:classappend="${#request.requestURI == '/secure/note/edit' ? 'active' : ''}">
+                        <a class="nav-link" th:href="@{/secure/note/edit}">
+                            Create Note <i class="far fa-plus-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="javascript::void()">
+                            <span sec:authentication="name"></span>
+                            <span sec:authentication="principal.authorities"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <a sec:authorize="isAuthenticated()"
+                       th:href="@{/logout}"
+                       class="btn btn-outline-danger my-2 my-sm-0"
+                       type="submit">
+                        Logout <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                    <a sec:authorize="!isAuthenticated()"
+                       th:href="@{/login}"
+                       class="btn btn-outline-success my-2 my-sm-0"
+                       type="submit">
+                        Login <i class="fas fa-sign-in-alt"></i>
+                    </a>
+                </form>
             </div>
         </div>
     </nav>

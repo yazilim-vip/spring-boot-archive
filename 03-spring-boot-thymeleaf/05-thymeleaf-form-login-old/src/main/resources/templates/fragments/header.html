@@ -31,15 +31,15 @@
                 <form class="form-inline my-2 my-lg-0">
                     <a sec:authorize="isAuthenticated()"
                        th:href="@{/logout}"
-                       class="btn btn-outline-success my-2 my-sm-0"
+                       class="btn btn-outline-danger my-2 my-sm-0"
                        type="submit">
-                        Logout
+                        Logout <i class="fas fa-sign-out-alt"></i>
                     </a>
                     <a sec:authorize="!isAuthenticated()"
                        th:href="@{/login}"
                        class="btn btn-outline-success my-2 my-sm-0"
                        type="submit">
-                        Login
+                        Login <i class="fas fa-sign-in-alt"></i>
                     </a>
                 </form>
             </div>

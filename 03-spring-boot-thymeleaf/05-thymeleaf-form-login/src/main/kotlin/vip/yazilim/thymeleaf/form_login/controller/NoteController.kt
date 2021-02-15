@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * 27.12.2020
  */
 @Controller
-@RequestMapping("/note")
+@RequestMapping("/secure/note")
 class NoteController(private val noteService: INoteService) {
 
     private val logger = LoggerFactory.getLogger(NoteController::class.java)
@@ -53,7 +53,7 @@ class NoteController(private val noteService: INoteService) {
         return try {
             note.creationDate = LocalDateTime.now()
             val editedNote = noteService.save(note)
-            "redirect:/note/edit/${editedNote.id}"
+            "redirect:/secure/note/edit/${editedNote.id}"
         } catch (exception: Exception) {
             logger.error("Error while editing note", exception)
             model.addAttribute("note", note)
@@ -67,7 +67,7 @@ class NoteController(private val noteService: INoteService) {
             NotFoundException("Not Found note[$id")
         }
         noteService.delete(note)
-        return "redirect:/note"
+        return "redirect:/secure/note"
     }
 
 }
